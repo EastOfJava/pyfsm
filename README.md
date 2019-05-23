@@ -1,5 +1,5 @@
-# pyfsm
-A Simple Python Finite State Machine Framework
+#pyfsm
+##A Simple Python Finite State Machine Framework
 This is an extremely simple state machine framework that is implemented in only a few lines of code.
 It consists of a single decorator and a base class. To create a Finite State Machine, siimply derive a class from the PyFSM base class and decorate any instance method that you want to be "statey" with the @state_event decorator.  Your PyFSM will be in the "idle" state to start.
 Next define state_event handlers by prepending a state name and underscore to the state_event name.  You can invoke the set_state method inside the event handlers if you want to invoke a different event next time the state_event is invoked.  Below is an example.  
