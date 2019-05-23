@@ -4,7 +4,7 @@ This is an extremely simple state machine framework that is implemented in only 
 It consists of a single decorator and a base class. To create a Finite State Machine, siimply derive a class from the PyFSM base class and decorate any instance method that you want to be "statey" with the @state_event decorator.  Your PyFSM will be in the "idle" state to start.
 Next define state_event handlers by prepending a state name and underscore to the state_event name.  You can invoke the set_state method inside the event handlers if you want to invoke a different event next time the state_event is invoked.  Below is an example.  
 
-Here is a worker PyFSM with two events, work() and stop() and two states, "idle" and "working".  Note how there is no state-event table to be initialized beforehand.  Also note that if no specific <state>_<event> handler is defined the decorated function is called.
+Here is a worker PyFSM with two events, work() and stop() and two states, "idle" and "working".  Note how there is no state-event table to be initialized beforehand.  Also note that if no state-specific handler is defined the decorated function is called.
 ```python
 From pyfsm import PyFSM, state_event
 
