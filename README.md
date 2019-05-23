@@ -42,7 +42,7 @@ class WorkerFSM(PyFSM):
     self.set_state("idle")
 ```
 The following code, then, will produce this output.  Add as many states and events as you want.
-
+```
 fsm = WorkerFSM()
 fsm.work()
 Working.
@@ -54,4 +54,4 @@ fsm.stop()
 I'm not working.
 fsm.stop()
 Default stop() handler for state 'No Handler'
-
+```
