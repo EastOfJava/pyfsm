@@ -5,7 +5,7 @@ It consists of a single decorator and a base class. To create a Finite State Mac
 Next define state_event handlers by prepending a state name and underscore to the state_event name.  You can invoke the set_state method inside the event handlers if you want to invoke a different event next time the state_event is invoked.  Below is an example.  
 
 Here is a worker PyFSM with two events, work() and stop() and two states, "idle" and "working".  Note how there is no state-event table to be initialized beforehand.  Also note that if no specific <state>_<event> handler is defined the decorated function is called.
-
+```python
 From pyfsm import PyFSM, state_event
 
 class WorkerFSM(PyFSM):
@@ -40,7 +40,7 @@ class WorkerFSM(PyFSM):
   def working_stop(self)"
     print "Stopping."
     self.set_state("idle")
- 
+```
 The following code, then, will produce this output.  Add as many states and events as you want.
 
 fsm = WorkerFSM()
